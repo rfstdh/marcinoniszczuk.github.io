@@ -1,0 +1,265 @@
+body
+{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	background-color: #303030;
+	color: #ffffff;
+	margin: 0 auto;
+}
+
+.wrapper
+{
+	width: 100%;
+}
+
+.header
+{
+	width:100%;
+	padding: 40px 0;
+}
+
+.nav
+{ 
+	width: 100%;
+	padding: 10px 0;
+	background-color: #979500;
+	text-align: center;
+	border-bottom: 1px solid #d0df00;
+}
+
+ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	height: 35px;
+	line-height: 200%;
+	display: inline-block;
+}
+
+
+ul a
+{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+}
+
+ul li
+{
+	float: left;
+	width: 150px;
+	height: 40px;
+}
+
+
+ul li:hover
+{
+	background-color: #ccc33f;
+	color: black;
+	cursor: pointer;
+}
+
+
+@media(max-width: 650px){
+    ul li{
+        width: 70px;
+    }
+}
+
+
+@media(min-width: 651px) and (max-width: 1000px){
+    ul li{
+        width: 100px;
+    }
+}
+
+.content.active, .gamecontent.active, .aboutcontent.active,.profilecontent.active, .contactcontent.active, .authorcontent.active
+{
+	width: 80%;
+	margin: auto;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+}
+
+.aboutcontent.active, .profilecontent.active, .contactcontent.active, .authorcontent.active{
+	height: 800px;
+}
+
+.content, .gamecontent, .aboutcontent,.profilecontent, .contactcontent, .authorcontent{
+	display: none;
+}
+
+
+.gamecontent.active, .aboutcontent.active,.profilecontent.active, .contactcontent.active, .authorcontent.active
+{
+	grid-template-columns: 1fr;	
+}
+
+@media all{
+	.register, .profile, .sth, .photo{
+		width: 100%;
+		text-align: center;
+	}
+
+	.register{
+		order:1 !important;
+	}
+	
+	.profile{
+		order:2 !important;
+		text-align: justify;
+	}
+	
+	.photo{
+		order: 3 !important;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.sth{
+		order: 4 !important;
+	}
+
+	.css3, .js, .html5{
+		width: 25%;
+		height: 155px;
+		float: left;
+	}
+}
+
+
+@media(max-width:650px){
+	.content.active{
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+	}
+	.langs {
+		display: flex;
+		flex-direction: column;
+	}
+	.css3, .js, .html5{
+		width: 100%;
+	}
+}
+
+p input{
+	border: 2px solid #222222;
+	height: 60px;
+	min-width: 60%;
+	background-color: lightgray;
+	text-align: center;
+}
+
+
+.loginbtn{
+	min-width: 60%;
+	border: 1px solid white;
+	background-color: #303030;
+	color: white;
+	height: 60px;
+}
+
+.loginbtn:hover{
+	cursor: pointer;
+	background-color: rgb(32, 32, 32);
+}
+
+.welcome{
+	text-align: center;
+}
+
+
+
+.motto{
+	text-align: center;
+}
+
+.langbar
+{
+	width:100%;
+	text-align: center;
+	background-color: #292929;
+}
+
+.langs
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.langs img {
+	width: 155px;
+	height: 155px;
+	text-align: center;
+}
+
+.css3:hover
+{
+	background-color: #496ab3;
+}
+
+
+.js:hover
+{
+	background-color: #e9e504da;
+}
+
+.html5:hover
+{
+	background-color: #db5635;
+}
+
+.footer
+{
+	text-align: center;
+	background-color: #222222;
+	padding: 30px;
+}
+
+
+td{
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	border: 4px solid white;
+	font-size: 86px;
+	font-weight: bold;
+
+}
+
+td:last-child{
+	border-right: none;
+}
+
+td:first-child{
+	border-left: none;
+}
+
+tr:first-child td{
+	border-top: none;
+}
+
+tr:last-child td{
+	border-bottom: none;
+}
+
+td:hover{
+	background-color: #292929;
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	display: inline-block;
+}
+
+.game{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
