@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />	
+	<title>Responsywna</title>		
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<div class="nav">
+			<ul>
+				<li onclick=switchContent(0)>Home</li>
+				<li onclick=switchContent(2)>About</li>
+				<li onclick=switchContent(1)>Games</li>
+				<li onclick=switchContent(3)>Profile</li>
+				<li onclick=switchContent(4)>Contact</li>
+				<li onclick=switchContent(5)>Authors</li>
+			</ul>		
+		</div>
+		<h4 class="welcome">Witaj na naszej stronie!</h4>
+		<div class="content active">
+				<div class="register">
+					<p>Zaloguj się na naszej stronie</p>
+					<p><input type="text" name="login" placeholder="Wprowadź swój login"/></p>
+					<p><input type="password" name="password" placeholder="Wprowadź swoje hasło"/></p>
+					<button class="loginbtn" type="button">Login</button>
+				</div>
+				<div class="profile">
+					<p>O nas</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus cursus sem, eu mollis nunc rutrum sit amet. 
+						Fusce egestas arcu scelerisque, pretium augue finibus, interdum nunc. Vestibulum at diam suscipit, euismod dolor dapibus, porttitor mi. 
+						Etiam sollicitudin, mi a congue fermentum, lorem lectus ullamcorper nisi, sit amet finibus diam sapien et metus. 
+						Praesent tortor sem, bibendum id dui quis, egestas venenatis ante. Mauris efficitur rhoncus arcu, id elementum mauris lacinia sit amet. 
+						Nulla dolor nisl, varius id elementum sit amet, fringilla ac lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</div>
+				<div class="photo">
+					<p>Galeria</p>
+					<img src="img/photo.png" width="255" height="255" alt="Photo"/>
+				</div>
+				<div class="sth">
+					<p>Motto</p>
+					<p class="motto"><i>"Kieruj swoim interesem, bo inaczej on tobą pokieruje". Benjamin Franklin</i></p>
+				</div>
+		</div>
+
+		<div class="gamecontent">
+			<h3 style="text-align: center;">KÓŁKO I KRZYŻYK</h3>
+			<h5 id="gameStatus" style="text-align: center;" onclick=newGame()>Kliknij dowolne pole, aby rozpocząć</h5>
+			<div class="game">
+				<table>
+					<tr>
+						<td id="field1" onclick=markField(this.id)></td>
+						<td id="field2" onclick=markField(this.id)></td>
+						<td id="field3" onclick=markField(this.id)></td>
+					</tr>
+					<tr>
+						<td id="field4" onclick=markField(this.id)></td>
+						<td id="field5" onclick=markField(this.id)></td>
+						<td id="field6" onclick=markField(this.id)></td>
+					</tr>
+					<tr>
+						<td id="field7" onclick=markField(this.id)></td>
+						<td id="field8" onclick=markField(this.id)></td>
+						<td id="field9" onclick=markField(this.id)></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="aboutcontent">
+			<h4>Well, it seems that the about page is actually about nothing...</h4>
+		</div>
+
+		<div class="profilecontent">
+			<h4>It might take some time to complete this page...</h4>
+		</div>
+
+		<div class="contactcontent">
+			<h4 id="fbdiv">Facebook login status...</h4>
+
+			<fb:login-button 
+			scope="public_profile,email"
+			onlogin="checkLoginState();">
+			</fb:login-button>
+
+		</div>
+
+		<div class="authorcontent">
+			<h4>There is only one author</h4>
+		</div>
+
+		<div class="langbar">
+			<div class="langs">
+				<div class="css3">
+					<img src="img/css3.png" alt=""/>
+				</div>
+				<div class="js">
+					<img src="img/js.png" alt=""/>
+				</div>
+				<div class="css3">
+					<img src="img/css3.png" alt=""/>
+				</div>
+				<div class="html5">
+					<img src="img/html5.png" alt=""/>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+		
+		<div class="footer">Created by Marcin Oniszczuk &copy; 2020 Prawa autorskie zastrzeżone</div>
+	</div>
+	
+	<script src="js/navigation.js"></script>
+	<script src="js/tictactoe.js"></script>
+	<script src="js/facebook.js"></script>
+</body>
+</html>
